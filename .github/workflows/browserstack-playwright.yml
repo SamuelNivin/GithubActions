@@ -25,6 +25,7 @@ jobs:
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
           build-name: BUILD_INFO
           project-name: REPO_NAME
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           github-app: 'false'
 
       - name: Run Playwright test on BrowserStack
