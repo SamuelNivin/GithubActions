@@ -1,0 +1,11 @@
+{
+  "name": "githubactions",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "playwright": "^1.50.1",
+    "http-server": "^14.1.1"
+  }
+}
