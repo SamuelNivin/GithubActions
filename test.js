@@ -29,7 +29,7 @@ if (TARGET_OS === 'windows') {
 } else if (TARGET_OS === 'mac') {
   caps = {
     os: 'osx',
-    osVersion: 'Ventura',
+    osVersion: 'Sonoma',
     name: 'Test on macOS',
     build: 'Sample Build',
     project: 'BrowserStack Playwright Sample',
@@ -101,3 +101,4 @@ if (TARGET_OS === 'windows') {
   await page.close();
   await browser.close();
 })();
+// trigger
