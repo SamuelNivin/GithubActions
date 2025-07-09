@@ -5,6 +5,7 @@ on: [push, pull_request]
 jobs:
   browserstack-test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -16,6 +17,14 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Setup BrowserStack Env
+        uses: browserstack/github-actions@shandli123-patch-1
+        with:
+          username: ${{ secrets.BROWSERSTACK_USERNAME }}
+          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+          build-name: BUILD_INFO
+          project-name: REPO_NAME
 
       - name: Run Playwright test on BrowserStack
         env:
