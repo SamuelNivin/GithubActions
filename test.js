@@ -4,7 +4,7 @@ const cp = require('child_process');
 const clientPlaywrightVersion = cp.execSync('npx playwright --version').toString().trim().split(' ')[1];
 console.log(`Local Playwright version: ${clientPlaywrightVersion}`);
 
-const TARGET_OS = 'mac';       // 'mac' or 'windows'
+const TARGET_OS = 'windows';       // 'mac' or 'windows'
 const BROWSER_TYPE = 'webkit'; // 'chromium' or 'webkit'
 
 let caps;
